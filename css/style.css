@@ -105,9 +105,10 @@ section aside ul li {
 section aside a {
   text-decoration: none;
   color: black;
+  transition: color 0.25s linear;
 }
 section aside a:hover {
-  text-decoration: underline;
+  color: darkslategrey;
 }
 footer {
   position: fixed;
@@ -137,4 +138,10 @@ footer address {
 }
 footer address a {
   display: block;
+  transition: font-size 0.25s linear;
+}
+footer address a:hover {
+  color: rgb(102, 110, 110);
+  text-decoration: none;
+  font-size: 14pt;
 }
