@@ -1,3 +1,57 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes rainbow {
+  0% {
+    color: purple;
+  }
+  25% {
+    color: rebeccapurple;
+  }
+  50% {
+    color: magenta;
+  }
+  75% {
+    color: lightpink;
+  }
+  100% {
+    color: mediumvioletred;
+  }
+}
+@keyframes wriggle {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
 html,
 body {
   width: 100%;
@@ -12,6 +66,7 @@ header {
   width: 100%;
   background-color: black;
   color: white;
+  animation: fadeIn 0.5s linear;
 }
 header h1 {
   font-size: 30px;
@@ -64,6 +119,8 @@ section article {
   float: left;
   box-sizing: border-box;
   padding: 10px;
+  margin-bottom: 160px;
+  animation: slideInFromLeft 0.5s ease-out;
 }
 h2 {
   text-align: justify;
@@ -84,6 +141,7 @@ section article a {
 }
 section article a:hover {
   text-decoration: underline;
+  animation: wriggle 0.5s linear;
 }
 section aside {
   float: right;
@@ -93,6 +151,7 @@ section aside {
   background-color: lightgray;
   border-radius: 10px;
   box-sizing: border-box;
+  animation: slideInFromRight 0.5s ease-out;
 }
 section aside ul {
   list-style-type: none;
@@ -119,6 +178,10 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
+  animation: fadeIn 0.5s linear;
+}
+footer h3 {
+  animation: rainbow 5s linear alternate infinite;
 }
 footer ul {
   list-style: none;
