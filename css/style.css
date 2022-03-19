@@ -208,3 +208,32 @@ footer address a:hover {
   text-decoration: none;
   font-size: 14pt;
 }
+@media all and (max-width: 768px) {
+  header ul li a,
+  section article p,
+  section aside a {
+    font-size: 1.2em;
+  }
+  section article {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  section aside {
+    width: 100%;
+    margin-bottom: 250px;
+  }
+}
+@media all and (max-width: 630px) {
+  header {
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+  section article {
+    margin-top: 40px;
+  }
+  article img {
+    max-width: 100%;
+  }
+}
